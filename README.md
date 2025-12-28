@@ -164,7 +164,7 @@ If you find this code useful in your research, please cite our DAC 2020 paper:
 
 Please direct any questions to this email address: waynelin567@gmail.com. I will reply as soon as possible.
 
-# Maintainers
+### Maintainers
 [waynelin567](https://github.com/waynelin567), [willytai](https://github.com/willytai), and [yclin7777777](https://github.com/yclin7777777)
 
 
