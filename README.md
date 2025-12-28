@@ -105,7 +105,7 @@ A dynamic binary `router` will be compiled in `bin/`
 
 ## Test
 
-- Download test cases from the official [ICCAD 2019 Contest](http://iccad-contest.org/2019/problems.html)
+- Download test cases from the official [ICCAD 2019 Contest](http://iccad-contest.org/2019/problems.html) Problem B/test cases
 - Place it under `FPGA_routing/` and leave the filename unchanged  
     Namely like :
     ```
