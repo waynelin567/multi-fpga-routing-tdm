@@ -1,0 +1,65 @@
+# Prerequisites
+*.png
+*.json
+*.prof.*
+*.prof
+*.log
+*.d
+*.swp
+boost_1_90_0/
+src/tbb/
+bin/
+*.txt
+*.lp
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+*.DS_store
+testcases/
+test_cases/
+paal/
+output/
+evaluaterFast
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Fortran module files
+*.mod
+*.smod
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+
+# dependency files
+.depend.mak
+
+# executable
+router
+
+# ctag
+tags
+
+# library
+paal
+
+# edge informations
+edge_info*
+
+# benchmark files
+benchmark*

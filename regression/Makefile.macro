@@ -1,0 +1,35 @@
+EXE=bin/regression
+CC = g++ -I$(BOOSTDIR) -I$(TBBROOT)/include -L$(BOOSTDIR)/stage/lib -L$(TBBLIB)
+#CC = g++ -I /usr/include/boost -I$(TBBROOT)/include -L$(BOOSTDIR)/stage/lib -L$(TBBLIB)
+
+MODE ?= O3
+CFLAGS = -$(MODE) -std=c++14 -fopenmp
+LDFLAGS = -ltbb -lboost_program_options
+DIRS   = bin
+
+all 	:	run
+run 	: 	bin/regression
+	@./bin/regression -x > bin/log.txt
+.PHONY 	:	all run
+
+OBJ_FILES = $(filter-out ../../src/main.o, $(wildcard ../../src/*.o))
+OBJ_FILES += main.o
+
+$(EXE): $(OBJ_FILES)
+	@for dir in $(DIRS); \
+	do \
+		if [ ! -d $$dir ]; then \
+			mkdir $$dir; \
+			echo "Creating directory \"$$dir\" ..."; \
+		fi; \
+	done
+	@$(CC) $(CFLAGS) -o $(EXE) $(OBJ_FILES) $(LDFLAGS)
+
+main.o: $(wildcard ../../src/*.h) main.cpp
+	@tput setaf 6
+	@echo "> Testcase: $(notdir $(shell pwd))"
+	@tput setaf 7
+	@$(CC) $(CFLAGS) -c main.cpp 
+
+clean:
+		@rm -rf *.o bin/*
